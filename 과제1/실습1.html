@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>과제1</title>
+
+  <style>
+    button {
+      background-color: #DCDBD7;
+      width: 200px;
+      height: 50px;
+      text-align: center;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    input {
+      border: none;
+      border-bottom: 5px solid #DCDBD7;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      outline: none;
+      font-size: 25px;
+      width: 120px;
+    }
+  </style>
+  <script>
+    function addFunc() {
+      let num1 = document.getElementById("input1").value;
+      let num2 = document.getElementById("input2").value;
+      let result = document.getElementById("result");
+
+      let ans = parseInt(Number(num1) + Number(num2));
+
+      result.value = ans;
+    }
+
+    function subFunc() {
+      let num1 = document.getElementById("input1").value;
+      let num2 = document.getElementById("input2").value;
+      let result = document.getElementById("result");
+
+      let ans = parseInt(Number(num1) - Number(num2));
+
+      result.value = ans;
+    }
+
+    function mulFunc() {
+      let num1 = document.getElementById("input1").value;
+      let num2 = document.getElementById("input2").value;
+      let result = document.getElementById("result");
+
+      let ans = parseInt(Number(num1) * Number(num2));
+
+      result.value = ans;
+    }
+
+    function divFunc() {
+      let num1 = document.getElementById("input1").value;
+      let num2 = document.getElementById("input2").value;
+      let result = document.getElementById("result");
+
+      let ans = parseInt(Number(num1) / Number(num2));
+      if (num1 == 0 || num2 == 0) {
+        window.alert("다시 입력하세요");
+        result.value = "";
+      } else {
+        result.value = ans;
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+  <input type="text" id="input1" />
+  <br>
+  <input type="text" id="input2" />
+
+  <div>
+    <button id="btn1" onclick="addFunc()">
+      더하기
+    </button>
+  </div>
+
+  <div>
+    <button id="btn2" onclick="subFunc()">
+      빼기
+    </button>
+  </div>
+
+  <div>
+    <button id="btn3" onclick="mulFunc()">
+      곱하기
+    </button>
+  </div>
+
+  <div>
+    <button id="btn4" onclick="divFunc()">
+      나누기
+    </button>
+  </div>
+  <div>
+    계산결과: <input type="text" id="result" />
+  </div>
+</body>
+
+</html>
