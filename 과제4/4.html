@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4</title>
+  <script>
+    let marginValue1 = 0;
+    let marginValue2 = 0;
+    function moveR() {
+      const Img = document.getElementById("Img");
+      marginValue1 += 10;
+      Img.style.marginLeft = marginValue1 + "px";
+    }
+
+    function moveL() {
+      const Img = document.getElementById("Img");
+      marginValue2 += 10;
+      Img.style.marginRight = marginValue2 + "px";
+    }
+
+  </script>
+</head>
+
+<body>
+  <div style="display: flex; justify-content: center;">
+    <img src="./image/1.png" id="Img" style="height: 200px; width: 200px;">
+  </div>
+  <br>
+  <div style="display: flex; justify-content: center;">
+    <button onclick="moveL()">왼쪽 이동</button>
+    <button onclick="moveR()">오른쪽 이동</button>
+
+  </div>
+</body>
+
+</html>

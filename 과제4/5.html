@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5</title>
+  <style>
+    li {
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+    function addItem() {
+      const itemValue = document.getElementById("itemValue").value;
+      const list = document.getElementById("list");
+      const listItem = document.createElement("li");
+      listItem.textContent = itemValue;
+
+      const deleteItem = document.createElement("button");
+      deleteItem.textContent = "항목 삭제";
+      deleteItem.style.marginLeft = "10px";
+      deleteItem.onclick = function () {
+        list.removeChild(listItem);
+      };
+
+      listItem.appendChild(deleteItem);
+      list.appendChild(listItem);
+
+      document.getElementById("itemValue").value = '';
+    }
+  </script>
+</head>
+
+<body>
+  <div style="display: flex; flex-direction: column; justify-content: flex-start;">
+    <h1>다음 번에 마트가면 사와야 할 것(동적 쇼핑 리스트)</h1>
+    <div>
+      항목을 입력하시오:
+      <input type="text" id="itemValue">
+      <button onclick="addItem()">
+        항목 추가
+      </button>
+    </div>
+    <ul id="list"></ul>
+  </div>
+</body>
+
+</html>

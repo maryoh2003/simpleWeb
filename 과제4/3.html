@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3</title>
+  <script>
+    function ranPic() {
+      const num = Math.floor(Math.random() * 4) + 1;
+      const randomPng = `./image/${num}.png`;
+      document.getElementById("ranImg").src = randomPng;
+    }
+  </script>
+</head>
+
+<body>
+  <button onclick="ranPic()">랜덤 이미지 표시</button>
+  <br>
+  <br>
+  <img src="./image/1.png" id="ranImg" style="height: 200px; width: 200px;">
+</body>
+
+</html>

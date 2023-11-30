@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6</title>
+  <script>
+    function printText() {
+      const name = document.getElementById("nameValue").value;
+      const address = document.getElementById("addValue").value;
+      document.getElementById("textBox").innerHTML = name + "<br>" + address;
+    }
+  </script>
+</head>
+
+<body>
+  <div style="display: flex; flex-direction: column; justify-content: flex-start;">
+    <div>
+      입력한 문자열을 출력해보세요.,
+    </div>
+    <br>
+    <div>
+      이름: <input type="text" id="nameValue" />
+    </div>
+    <div>
+      주소: <input type="text" id="addValue" />
+    </div>
+    <div>
+      <button onclick="printText()">출력</button>
+    </div>
+    <br>
+    <div id="textBox">
+    </div>
+  </div>
+</body>
+
+</html>
